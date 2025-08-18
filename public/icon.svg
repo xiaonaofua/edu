@@ -1,0 +1,17 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain silhouette background -->
+  <rect width="96" height="96" rx="16" fill="#3b82f6"/>
+  
+  <!-- Mountain peaks -->
+  <path d="M20 60 L35 35 L50 50 L65 25 L80 45 L80 70 L20 70 Z" fill="#1e40af"/>
+  
+  <!-- Sun/Future symbol -->
+  <circle cx="70" cy="25" r="8" fill="#fbbf24"/>
+  
+  <!-- Path/Road -->
+  <path d="M20 70 Q48 65 80 70" stroke="#e5e7eb" stroke-width="3" fill="none"/>
+  
+  <!-- Small tree/growth symbol -->
+  <rect x="47" y="55" width="2" height="8" fill="#10b981"/>
+  <circle cx="48" cy="53" r="3" fill="#10b981"/>
+</svg>
