@@ -60,14 +60,21 @@ git push origin master
 - `next.config.js` → Static export configuration
 - `.github/workflows/deploy.yml` → GitHub Actions workflow
 - `package.json` → Build scripts
+- `.nojekyll` → Disables Jekyll processing
 
-### 📋 First-Time Setup
+### 📋 **IMPORTANT: First-Time Setup**
 
-To enable GitHub Pages (one-time setup):
+**You MUST manually configure GitHub Pages settings:**
 
 1. Go to https://github.com/xiaonaofua/edu/settings/pages
-2. Under "Source", select "GitHub Actions"
-3. The workflow will automatically deploy on next push
+2. Under "Source", select "**GitHub Actions**" (NOT "Deploy from a branch")
+3. Save the settings
+4. Push code to trigger the first deployment
+
+**Why this step is required:**
+- GitHub defaults to Jekyll for static sites
+- We need to tell GitHub to use our custom Actions workflow
+- The `.nojekyll` file prevents Jekyll processing
 
 ### 🐛 Troubleshooting
 
