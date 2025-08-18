@@ -38,6 +38,8 @@ jobs:
         with:
           # Automatically inject router.basePath in your Next.js configuration file
           static_site_generator: next
+          # Enable GitHub Pages if not already enabled
+          enablement: true
       
       - name: Restore cache
         uses: actions/cache@v3
