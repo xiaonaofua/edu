@@ -17,7 +17,6 @@ if not exist "package.json" (
     echo ERROR: package.json not found!
     echo Please run this script from the project root directory.
     echo.
-    pause
     exit /b 1
 )
 
@@ -35,7 +34,6 @@ if not "%GIT_STATUS%"=="" (
     set /p CONTINUE=
     if /i not "%CONTINUE%"=="y" (
         echo Deployment cancelled.
-        pause
         exit /b 0
     )
 )
@@ -49,7 +47,6 @@ if errorlevel 1 (
     echo Please fix linting errors before deployment.
     echo Run 'npm run lint:fix' to auto-fix some issues.
     echo.
-    pause
     exit /b 1
 )
 
@@ -60,7 +57,6 @@ if errorlevel 1 (
     echo ERROR: TypeScript type check failed!
     echo Please fix type errors before deployment.
     echo.
-    pause
     exit /b 1
 )
 
@@ -71,7 +67,6 @@ if errorlevel 1 (
     echo ERROR: Build failed!
     echo Please check build errors and fix them.
     echo.
-    pause
     exit /b 1
 )
 
@@ -98,7 +93,6 @@ if errorlevel 1 (
     echo ERROR: Push to GitHub failed!
     echo Please check your network connection and GitHub credentials.
     echo.
-    pause
     exit /b 1
 )
 
@@ -131,4 +125,5 @@ if /i "%OPEN_GITHUB%"=="y" (
 
 echo.
 echo Deployment script completed!
+echo Press any key to exit...
 pause
